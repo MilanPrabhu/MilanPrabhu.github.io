@@ -723,7 +723,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">Milan<span>.</span></a>
+  <a href="#hero" class="nav-logo" style="visibility:hidden;">·</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -957,14 +957,14 @@
     <div class="reveal">
       <p class="section-label">Contact</p>
       <h2 class="section-title">Let's work<br/>together</h2>
-      <p>I'm currently open to full-time data science roles and internships. Whether you want to discuss a project, an opportunity, or just connect — my inbox is always open.</p>
+      <p>I am currently open to full-time data science and data analyst roles. Whether you want to discuss a project, an opportunity, or just connect, feel free to reach out.</p>
     </div>
     <div class="contact-links reveal" style="transition-delay:0.15s">
-      <a href="/cdn-cgi/l/email-protection#9df0f4f1fcf3edeffcfff5e8a4acddfaf0fcf4f1b3fef2f0" class="contact-link">
+            <a id="email-link" href="#" class="contact-link" onclick="this.href='mai'+'lto:'+'milanprabhu91'+'@'+'gmail.com'">
         <div class="contact-link-icon">✉️</div>
         <div>
           <span class="contact-link-label">Email</span>
-          <span class="__cf_email__" data-cfemail="86ebefeae7e8f6f4e7e4eef3bfb7c6e1ebe7efeaa8e5e9eb">[email&#160;protected]</span>
+          <span id="email-display"></span>
         </div>
       </a>
       <a href="https://www.linkedin.com/in/milanprabhu909" target="_blank" class="contact-link">
@@ -1034,6 +1034,14 @@
   }
   checkCounters();
   window.addEventListener('scroll', checkCounters, { passive: true });
+</script>
+<script>
+(function() {
+  var u = "milanprabhu91";
+  var d = "gmail.com";
+  var el = document.getElementById("email-display");
+  if (el) el.textContent = u + "@" + d;
+})();
 </script>
 </body>
 </html>
